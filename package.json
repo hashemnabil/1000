@@ -1,0 +1,17 @@
+{
+  "name": "abdullah-quran-school",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"npm run dev --workspace @school/api\" \"npm run dev --workspace @school/web\"",
+    "db:generate": "npm run db:generate --workspace @school/api",
+    "db:migrate": "npm run db:migrate --workspace @school/api",
+    "db:seed": "npm run db:seed --workspace @school/api"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  },
+  "workspaces": [
+    "apps/api",
+    "apps/web"
+  ]
+}
